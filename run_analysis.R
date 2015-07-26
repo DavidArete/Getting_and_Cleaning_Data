@@ -104,7 +104,9 @@ temp_cols <- gsub("mag", " Mag ", temp_cols)
 temp_cols <- gsub(" x", " X", temp_cols)
 temp_cols <- gsub(" y", " Y", temp_cols)
 temp_cols <- gsub(" z", " Z", temp_cols)
-temp_cols <- gsub("  ", " ", temp_cols)
+temp_cols <- gsub(" ", "", temp_cols)
+##last step was to remove spaces as advides in the week 4 lectures, which I only just started
+##so did not see then doing this work.
 
 ##and now pop them back as column names
 colnames(mergedData) <- temp_cols
